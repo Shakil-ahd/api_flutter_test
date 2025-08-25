@@ -46,10 +46,11 @@ class _ApiHomeState extends State<ApiHome> {
           : ListView.builder(
               itemCount: posts.length,
               itemBuilder: (context, index) {
+                final data = posts[index];
                 return Card(
                   child: ListTile(
-                    title: Text(posts[index]["title"]),
-                    subtitle: Text(posts[index]["body"]),
+                    title: Text(data["title"]),
+                    subtitle: Text(data["body"]),
                   ),
                 );
               },
